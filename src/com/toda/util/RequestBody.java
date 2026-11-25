@@ -1,4 +1,4 @@
-// src/com/toda/util/RequestBody.
+// src/com/toda/util/RequestBody.java
 package com.toda.util;
 
 import com.toda.exception.InvalidInputException;
