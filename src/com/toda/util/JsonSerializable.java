@@ -1,4 +1,4 @@
-// src/com/toda/util/JsonSerializable.
+// src/com/toda/util/JsonSerializable.java
 package com.toda.util;
 
 import java.util.Map;
