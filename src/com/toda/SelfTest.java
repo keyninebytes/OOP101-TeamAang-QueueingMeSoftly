@@ -1,4 +1,4 @@
-// src/com/toda/SelfTest.java
+// src/com/toda/SelfTest.
 package com.toda;
 
 import com.toda.exception.CapacityExceededException;
