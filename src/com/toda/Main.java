@@ -1,4 +1,4 @@
-// src/com/toda/Main.java
+// src/com/toda/Main.
 package com.toda;
 
 import com.sun.net.httpserver.HttpServer;
