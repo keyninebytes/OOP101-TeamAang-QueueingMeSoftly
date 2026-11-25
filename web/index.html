@@ -1,0 +1,123 @@
+<!-- web/index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#F5F5F7">
+  <title>Queueing Me Softly</title>
+  <link rel="icon" id="favicon" type="image/svg+xml" href="/img/qms-favicon.svg">
+  <link rel="apple-touch-icon" href="/img/qms-icon-180.png">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <!-- Queueing Me Softly logo. Tile color follows --color-primary/--color-secondary, green parts follow --color-accent. -->
+  <svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+    <defs>
+      <clipPath id="qmsWindshield"><rect x="316" y="468" width="190" height="104" rx="22"/></clipPath>
+      <symbol id="qms-glyph" viewBox="0 0 1024 1024">
+        <g transform="translate(-6 30)">
+          <g stroke-linecap="round" stroke-width="28" fill="none">
+            <path d="M206 262H446" stroke="#FFFFFF" stroke-opacity="0.5"/>
+            <path d="M246 316H356" stroke="#FFFFFF" stroke-opacity="0.85"/>
+            <path d="M394 316H478" style="stroke:var(--logo-accent)"/>
+            <path d="M196 370H232" stroke="#FFFFFF" stroke-opacity="0.4"/>
+          </g>
+          <use href="#qms-trike"/>
+          <path fill="#FFFFFF" fill-rule="evenodd" d="M770 188C724 188 696 222 696 262C696 312 744 346 770 378C796 346 844 312 844 262C844 222 816 188 770 188ZM763 246H777Q786 246 786 255V269Q786 278 777 278H763Q754 278 754 269V255Q754 246 763 246ZM800 246H814Q823 246 823 255V269Q823 278 814 278H800Q791 278 791 269V255Q791 246 800 246Z"/>
+          <rect x="791" y="246" width="32" height="32" rx="9" fill="#FFFFFF" fill-opacity="0.6"/>
+          <rect x="717" y="246" width="32" height="32" rx="9" style="fill:var(--logo-accent)"/>
+        </g>
+      </symbol>
+      <symbol id="qms-trike" viewBox="0 0 1024 1024">
+        <rect x="262" y="372" width="300" height="48" rx="24" style="fill:var(--logo-accent)"/>
+        <path fill="#FFFFFF" fill-rule="evenodd" d="M320 434H504Q542 434 548 472L566 640Q570 690 528 690H296Q254 690 258 640L276 472Q282 434 320 434ZM338 468H484Q506 468 506 490V550Q506 572 484 572H338Q316 572 316 550V490Q316 468 338 468Z"/>
+        <rect x="300" y="676" width="64" height="94" rx="28" fill="#FFFFFF"/>
+        <rect x="540" y="622" width="130" height="34" rx="17" fill="#FFFFFF"/>
+        <g clip-path="url(#qmsWindshield)" style="fill:var(--logo-accent)">
+          <path d="M360 590L420 450H446L386 590Z"/>
+          <path d="M410 590L470 450H520L460 590Z"/>
+        </g>
+        <path d="M376 602H448Q462 602 460 616L456 642Q454 654 442 654H382Q370 654 368 642L364 616Q362 602 376 602Z" style="fill:var(--logo-accent)"/>
+        <path d="M598 452Q614 480 648 480H760Q794 480 808 452" fill="none" stroke="#FFFFFF" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+        <path fill="#FFFFFF" fill-rule="evenodd" d="M666 494H742Q760 494 758 512L750 606Q748 624 730 624H678Q660 624 658 606L650 512Q648 494 666 494ZM674 548A30 30 0 1 0 734 548A30 30 0 1 0 674 548Z"/>
+        <rect x="672" y="612" width="64" height="158" rx="30" fill="#FFFFFF"/>
+        <circle cx="704" cy="548" r="18" style="fill:var(--logo-accent)"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <div class="app">
+    <!-- Desktop sidebar (>= 768px) -->
+    <aside class="sidebar" aria-label="Main navigation">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 1024 1024"><use href="#qms-glyph"/></svg>
+        </div>
+        <div class="brand-text">
+          <strong>Queueing Me Softly</strong>
+          <span id="brandTerminal">TODA Terminal</span>
+        </div>
+      </div>
+      <nav class="side-nav" id="sideNav"></nav>
+      <div class="sidebar-foot">
+        <span class="live-dot" aria-hidden="true"></span>
+        <span id="clock" class="num">--:--</span>
+        <span class="muted">· Offline mode</span>
+      </div>
+    </aside>
+
+    <main class="main" id="main">
+      <header class="page-head">
+        <div class="page-title">
+          <div class="brand-mark brand-mark-sm" aria-hidden="true">
+            <svg viewBox="0 0 1024 1024"><use href="#qms-glyph"/></svg>
+          </div>
+          <div>
+            <p class="eyebrow" id="pageEyebrow">Today</p>
+            <h1 id="pageTitle">Dashboard</h1>
+          </div>
+        </div>
+        <div class="head-actions" id="headActions"></div>
+      </header>
+      <div id="view" class="view" tabindex="-1"></div>
+    </main>
+
+    <!-- Mobile tab bar (< 768px) -->
+    <nav class="tabbar" id="tabBar" aria-label="Main navigation"></nav>
+  </div>
+
+  <!-- Slide-over drawer / bottom sheet -->
+  <div class="scrim" id="scrim" hidden></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" hidden>
+    <div class="drawer-head">
+      <div>
+        <p class="eyebrow" id="drawerEyebrow"></p>
+        <h2 id="drawerTitle"></h2>
+      </div>
+      <button class="icon-btn" id="drawerClose" aria-label="Close">
+        <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="drawer-body" id="drawerBody"></div>
+    <div class="drawer-foot" id="drawerFoot"></div>
+  </aside>
+
+  <!-- Centered confirm modal -->
+  <div class="modal-wrap" id="modalWrap" hidden>
+    <div class="modal" role="alertdialog" aria-modal="true" aria-labelledby="modalTitle">
+      <h3 id="modalTitle"></h3>
+      <p id="modalText"></p>
+      <div class="modal-actions">
+        <button class="btn btn-plain" id="modalCancel">Cancel</button>
+        <button class="btn btn-primary" id="modalOk">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+  <div class="chart-tip" id="chartTip" hidden></div>
+
+  <script src="/js/app.js" type="module"></script>
+</body>
+</html>

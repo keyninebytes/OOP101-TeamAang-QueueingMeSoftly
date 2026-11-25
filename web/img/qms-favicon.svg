@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="t">
+  <title id="t">Queueing Me Softly</title>
+  <!-- Queueing Me Softly favicon: simplified icon (tricycle only) for 16–32px. -->
+  <g>
+    <rect width="1024" height="1024" rx="230" fill="#0066D6"/>
+  <g transform="translate(512 520) scale(1.3) translate(-533 -571)">
+  <defs><clipPath id="qms-fws"><rect x="316" y="468" width="190" height="104" rx="22"/></clipPath></defs>
+  <rect x="262" y="372" width="300" height="48" rx="24" fill="#30D158"/>
+  <g fill="#FFFFFF">
+    <path d="M320 434H504Q542 434 548 472L566 640Q570 690 528 690H296Q254 690 258 640L276 472Q282 434 320 434Z"/>
+    <rect x="300" y="676" width="64" height="94" rx="28"/>
+    <rect x="540" y="622" width="130" height="34" rx="17"/>
+  </g>
+  <rect x="316" y="468" width="190" height="104" rx="22" fill="#0066D6"/>
+  <g clip-path="url(#qms-fws)" fill="#30D158">
+    <path d="M360 590L420 450H446L386 590Z"/>
+    <path d="M410 590L470 450H520L460 590Z"/>
+  </g>
+  <path d="M376 602H448Q462 602 460 616L456 642Q454 654 442 654H382Q370 654 368 642L364 616Q362 602 376 602Z" fill="#30D158"/>
+  <g stroke="#FFFFFF" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M598 452Q614 480 648 480H760Q794 480 808 452"/>
+  </g>
+  <g fill="#FFFFFF">
+    <path d="M666 494H742Q760 494 758 512L750 606Q748 624 730 624H678Q660 624 658 606L650 512Q648 494 666 494Z"/>
+    <rect x="672" y="612" width="64" height="158" rx="30"/>
+  </g>
+  <circle cx="704" cy="548" r="30" fill="#0066D6"/>
+  <circle cx="704" cy="548" r="18" fill="#30D158"/>
+  
+  </g>
+  </g>
+</svg>
