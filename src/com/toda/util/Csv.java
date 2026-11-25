@@ -4,7 +4,7 @@ package com.toda.util;
 import java.util.ArrayList;
 import java.util.List;
 
-/** RFC-4180 style quoting so driver names with commas or quotes never break a log row. 
+/** RFC-4180 style quoting so driver names with commas or quotes never break a log row. */
 public final class Csv {
     private Csv() {
     }
