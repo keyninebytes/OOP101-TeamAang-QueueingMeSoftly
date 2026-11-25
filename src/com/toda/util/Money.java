@@ -1,4 +1,4 @@
-// src/com/toda/util/Money.
+// src/com/toda/util/Money.java
 package com.toda.util;
 
 import java.math.BigDecimal;
