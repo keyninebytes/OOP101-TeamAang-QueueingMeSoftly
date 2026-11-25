@@ -1,4 +1,4 @@
-// src/com/toda/util/Json.java
+// src/com/toda/util/Json.
 package com.toda.util;
 
 import java.util.ArrayList;
